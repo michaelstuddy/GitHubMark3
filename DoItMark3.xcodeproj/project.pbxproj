@@ -13,6 +13,7 @@
 		B0E349941F269A7500CA685B /* DoItMark3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0E349921F269A7500CA685B /* DoItMark3.xcdatamodeld */; };
 		B0E349961F269A7500CA685B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E349951F269A7500CA685B /* Assets.xcassets */; };
 		B0E349991F269A7500CA685B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E349971F269A7500CA685B /* LaunchScreen.storyboard */; };
+		B0E349A11F269AD600CA685B /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E349A01F269AD600CA685B /* task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B0E349951F269A7500CA685B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E349981F269A7500CA685B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E3499A1F269A7500CA685B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E349A01F269AD600CA685B /* task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				B0E3498B1F269A7500CA685B /* AppDelegate.swift */,
 				B0E3498D1F269A7500CA685B /* ViewController.swift */,
+				B0E349A01F269AD600CA685B /* task.swift */,
 				B0E3498F1F269A7500CA685B /* Main.storyboard */,
 				B0E349951F269A7500CA685B /* Assets.xcassets */,
 				B0E349971F269A7500CA685B /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E349A11F269AD600CA685B /* task.swift in Sources */,
 				B0E3498E1F269A7500CA685B /* ViewController.swift in Sources */,
 				B0E349941F269A7500CA685B /* DoItMark3.xcdatamodeld in Sources */,
 				B0E3498C1F269A7500CA685B /* AppDelegate.swift in Sources */,
