@@ -56,7 +56,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         task3.important = true
         return [task1,task2,task3]
         
+  
     }
-}
+    
+   
+    @IBAction func TappedPlus(_ sender: Any) {
+        
+        performSegue(withIdentifier: "addSegue", sender: nil)
+        
+    }
+    
+    }
+    
+
 
 
