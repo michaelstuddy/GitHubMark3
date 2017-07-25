@@ -13,7 +13,7 @@
         <!--DoIt-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DoItMark3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="DoItMark3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="bqv-FJ-RRP">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="uh8-7z-fNl" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="uh8-7z-fNl" customClass="CreateTaskViewController" customModule="DoItMark3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cQa-ld-0f1"/>
                         <viewControllerLayoutGuide type="bottom" id="aan-3i-CA5"/>
@@ -88,9 +88,19 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ix-s1-0sv">
                                 <rect key="frame" x="163" y="256" width="51" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-Z1-iTC">
+                                <rect key="frame" x="172" y="317" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="uh8-7z-fNl" eventType="touchUpInside" id="ahg-qo-Axg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ne3-Z1-iTC" firstAttribute="centerX" secondItem="2QI-p9-RcN" secondAttribute="centerX" id="2fR-Np-Rqa"/>
                             <constraint firstItem="zgl-AJ-Kii" firstAttribute="centerX" secondItem="2QI-p9-RcN" secondAttribute="centerX" id="4Ld-JJ-shB"/>
                             <constraint firstItem="zgl-AJ-Kii" firstAttribute="centerX" secondItem="2QI-p9-RcN" secondAttribute="centerX" id="AGz-qe-wfT"/>
                             <constraint firstItem="zgl-AJ-Kii" firstAttribute="top" secondItem="XbE-wS-k7c" secondAttribute="bottom" constant="30" id="IGG-7j-ZRw"/>
@@ -99,9 +109,14 @@
                             <constraint firstItem="4ix-s1-0sv" firstAttribute="centerX" secondItem="2QI-p9-RcN" secondAttribute="centerX" id="dNL-Uq-knG"/>
                             <constraint firstItem="XbE-wS-k7c" firstAttribute="top" secondItem="cQa-ld-0f1" secondAttribute="bottom" constant="50" id="eah-oC-BEA"/>
                             <constraint firstItem="4ix-s1-0sv" firstAttribute="top" secondItem="pr3-9a-PrL" secondAttribute="bottom" constant="10" id="mxM-N7-b2x"/>
+                            <constraint firstItem="Ne3-Z1-iTC" firstAttribute="top" secondItem="4ix-s1-0sv" secondAttribute="bottom" constant="30" id="qwh-NG-PMt"/>
                             <constraint firstItem="XbE-wS-k7c" firstAttribute="centerX" secondItem="2QI-p9-RcN" secondAttribute="centerX" id="zwP-EY-ocq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TaskNameTextField" destination="zgl-AJ-Kii" id="Ue1-vI-aOK"/>
+                        <outlet property="importantSwitch" destination="4ix-s1-0sv" id="bHj-aC-fdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvF-Dd-M9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
