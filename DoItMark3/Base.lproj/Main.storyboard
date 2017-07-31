@@ -46,11 +46,52 @@
                     <connections>
                         <outlet property="tableView" destination="7iD-yv-Kjo" id="V61-h4-K8M"/>
                         <segue destination="uh8-7z-fNl" kind="show" identifier="addSegue" id="RLG-Oo-iMX"/>
+                        <segue destination="vUG-lr-8Pd" kind="show" identifier="selectTaskSegue" id="qZ3-kv-4fv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="tFr-HB-YMQ">
+            <objects>
+                <viewController id="vUG-lr-8Pd" customClass="CompleteTaskViewController" customModule="DoItMark3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMw-HO-yBV"/>
+                        <viewControllerLayoutGuide type="bottom" id="xpf-Sy-eJB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dq8-LI-KbS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMB-GG-wdF">
+                                <rect key="frame" x="151.5" y="72" width="72.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHh-tP-bPO">
+                                <rect key="frame" x="149" y="167" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Completed"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="vUG-lr-8Pd" eventType="touchUpInside" id="NSc-8c-x6W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rMB-GG-wdF" firstAttribute="centerX" secondItem="dq8-LI-KbS" secondAttribute="centerX" id="Twx-F5-XfZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="rMB-GG-wdF" id="4gb-5a-GyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zi-qg-KRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="800.14992503748135"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="bqv-FJ-RRP">
@@ -85,7 +126,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ix-s1-0sv">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4ix-s1-0sv">
                                 <rect key="frame" x="163" y="256" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-Z1-iTC">
