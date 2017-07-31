@@ -5,15 +5,14 @@
 //  Created by Michael Ruddy on 7/24/17.
 //  Copyright © 2017 Michael Ruddy. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
-   var tasks : [Task] = []
-    var selectedIndex = 0
+    
+    var tasks : [Task] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tasks = makeTasks()
@@ -36,18 +35,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
         }
         return cell
-        
-        
-    }
-    
+        }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.row
-        let tasks = self.tasks[indexPath.row]
-      performSegue(withIdentifier: "selectTaskSegue", sender: nil)
-        
-        
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
     }
-    
     
     func makeTasks() -> [Task] {
         let task1 = Task()
@@ -65,10 +57,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         task3.important = true
         return [task1,task2,task3]
         
-  
+        
     }
     
-   
+    
     @IBAction func TappedPlus(_ sender: Any) {
         
         performSegue(withIdentifier: "addSegue", sender: nil)
@@ -81,15 +73,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         nextVC.previousVC = self
         
     }
-        if segue.identifier == "selectTaskSegue"{
-            let nextVC = segue.destination as! CompleteTaskViewController
+        if segue.identifier == "selectTaskSegue" {
+            let nextVC = segue.destination as!
+            CompleteTaskViewController
             nextVC.task = sender as! Task
-            nextVC.previousVC = self
             
-            
-    }
 }
 
 
 
-}
+
+    }}
