@@ -11,23 +11,24 @@ import UIKit
 class CreateTaskViewController: UIViewController {
     
     @IBOutlet weak var TaskNameTextField: UITextField!
-    
-    var previousVC = ViewController()
-    
     @IBOutlet weak var importantSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-   
+    
     @IBAction func addButton(_ sender: Any) {
-        let task = Task()
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let task = Task(context: context)
         task.name = TaskNameTextField.text!
         task.important = importantSwitch.isOn
-        previousVC.tasks.append(task)
-        previousVC.tableView.reloadData()
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        // pop back
+        
         navigationController!.popViewController(animated: true)
         
-        }
-    
     }
+    
+}
